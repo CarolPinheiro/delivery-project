@@ -1,9 +1,17 @@
-
+import { useState, useEffect } from 'react';
+import AdressInput from './Components/AddressInput';
+import Header from './Components/Header'
 function App() {
+  const [searchValue, setSearchValue] = useState("")
+
+  useEffect(() => {
+    console.log(searchValue)
+  }, [searchValue])
   return (
-    <div className="App">
-      Oi
-    </div>
+    <>
+      <Header />
+      <AdressInput SearchValue={setSearchValue} />
+    </>
   );
 }
 
